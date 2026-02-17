@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article>
+    <h1>{{ .Title }}</h1>
+
+    <div class="post-meta">
+        <span class="date">{{ .Site.Language.Params.postedOn }} {{ .Date.Format "2 Jan 2006" }}</span>
+        {{ if .IsTranslated }}
+        <span class="lang-inline">
+            {{ range .Translations }}
+            | <a href="{{ .Permalink }}">{{ $.Site.Language.Params.switchLangLabel }}</a>
+            {{ end }}
+        </span>
+        {{ end }}
+    </div>
+
+    {{ if .Params.tags }}
+    <div class="post-tags">
+        {{ .Site.Language.Params.taggedWith }}
+        {{ range .Params.tags }}
+        <a href="{{ "tags/" | absURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+
+    <div class="post-nav">
+        <a href="{{ .Site.BaseURL }}">&larr; {{ .Site.Language.Params.backToHome }}</a>
+    </div>
+</article>
+{{ end }}

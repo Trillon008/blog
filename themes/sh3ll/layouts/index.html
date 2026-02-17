@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ .Content }}
+
+<br/>
+<p> > {{ .Site.Language.Params.subtitle }}</p>
+
+
+<h1>{{ .Site.Language.Params.latestPosts }}</h1>
+{{ $pages := where .Site.RegularPages "Section" "not in" "about" }}
+
+<div class="posts-list">
+{{ range $pages }}
+        <div class="post">
+            <p>
+                <div class="date">{{ .PublishDate.Format "2 Jan 2006" }}</div>
+                <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+                {{ if .Params.tags }}
+                <div class="post-tags">
+                    {{ range .Params.tags }}
+                    <a href="{{ "tags/" | absURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </p>
+        </div>
+{{ end }}
+</div>
+
+{{ end }}

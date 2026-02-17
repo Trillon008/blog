@@ -1,0 +1,18 @@
+name = "sh3ll"
+license = "MIT"
+licenselink = ""
+description = "minimal and responsive Hugo theme"
+homepage = "None"
+tags = ["blog", "terminal", "clean", "personal", "minimal", "simple", "technical", "responsive", "mobile", "minimalist", "retro", "shell"]
+features = ["responsive", "categories"]
+min_version = "0.90.0"
+
+[author]
+  name = "Tristan Bouillon"
+  homepage = ""
+  github = "https://github.com/Trillon008"
+
+[original]
+  author = "Jonas D."
+  homepage = "https://terminalcss.xyz/"
+  repo = "https://github.com/Gioni06/terminal.css"

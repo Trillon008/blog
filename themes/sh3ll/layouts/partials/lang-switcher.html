@@ -1,0 +1,12 @@
+{{ if .IsTranslated }}
+  {{ range .Translations }}
+    <a href="{{ .Permalink }}" class="lang-link" title="{{ $.Site.Language.Params.switchLangLabel }}">[ {{ $.Site.Language.Params.switchLang }} ]</a>
+  {{ end }}
+{{ else }}
+  {{ $currentLang := .Lang }}
+  {{ if eq $currentLang "fr" }}
+    <a href="{{ "en/" | absURL }}" class="lang-link" title="{{ .Site.Language.Params.switchLangLabel }}">[ {{ .Site.Language.Params.switchLang }} ]</a>
+  {{ else }}
+    <a href="{{ "/" | absURL }}" class="lang-link" title="{{ .Site.Language.Params.switchLangLabel }}">[ {{ .Site.Language.Params.switchLang }} ]</a>
+  {{ end }}
+{{ end }}

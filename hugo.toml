@@ -1,0 +1,76 @@
+baseURL = 'https://example.org/'
+title = 'I like to grumble'
+theme = 'sh3ll'
+
+defaultContentLanguage = 'fr'
+defaultContentLanguageInSubdir = false
+
+[params]
+  titleCutting = true
+  animateStyle = "animated zoomIn fast"
+  author = "Tristan Bouillon"
+  description = "A place where I can rant about... whatever"
+  github = "https://github.com/Trillon008"
+
+[languages]
+  [languages.fr]
+    languageCode = 'fr-fr'
+    languageName = 'FR'
+    weight = 1
+    contentDir = 'content/fr'
+    [languages.fr.params]
+      subtitle = "Un endroit où je peux râler... sur n'importe quoi"
+      readMore = "Lire la suite"
+      latestPosts = "Derniers articles"
+      postedOn = "Publié le"
+      taggedWith = "Tags:"
+      allTagsTitle = "Toutes les catégories"
+      articlesInCategory = "Articles dans la catégorie"
+      backToHome = "Retour à l'accueil"
+      switchLang = "EN"
+      switchLangLabel = "Read in English"
+
+    [[languages.fr.params.navlinks]]
+    name = "catégories/"
+    url = "/tags/"
+
+    [[languages.fr.params.navlinks]]
+    name = "about/"
+    url = "/about/"
+
+  [languages.en]
+    languageCode = 'en-us'
+    languageName = 'EN'
+    weight = 2
+    contentDir = 'content/en'
+    [languages.en.params]
+      subtitle = "A place where I can rant about... whatever"
+      readMore = "Read more"
+      latestPosts = "Latest posts"
+      postedOn = "Posted on"
+      taggedWith = "Tags:"
+      allTagsTitle = "All categories"
+      articlesInCategory = "Articles in category"
+      backToHome = "Back to home"
+      switchLang = "FR"
+      switchLangLabel = "Lire en français"
+
+    [[languages.en.params.navlinks]]
+    name = "categories/"
+    url = "/en/tags/"
+
+    [[languages.en.params.navlinks]]
+    name = "about/"
+    url = "/en/about/"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  [permalinks.page]
+    posts = '/:slug'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

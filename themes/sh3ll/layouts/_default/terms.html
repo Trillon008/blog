@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<h1>{{ .Site.Language.Params.allTagsTitle }}</h1>
+
+<div class="tags-list">
+{{ range .Data.Terms.Alphabetical }}
+    <div class="tag-item">
+        <a href="{{ .Page.Permalink }}" class="tag-link">
+            <span class="tag-name">> {{ .Page.Title }}</span>
+            <span class="tag-count">({{ .Count }})</span>
+        </a>
+    </div>
+{{ end }}
+</div>
+
+{{ end }}
