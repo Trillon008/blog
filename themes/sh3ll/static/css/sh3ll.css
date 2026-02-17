@@ -10,13 +10,15 @@
     --font-color: #e8e8e8;
     --invert-font-color: #222;
     --mono-font-stack:
-        "Menlo", "Monaco", "Lucida Console", "Liberation Mono",
-        "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New",
-        monospace, serif;
+        "IBM Plex Mono", "Zed Mono", "PxPlus IBM VGA8", "IBM VGA 8x16",
+        "Cascadia Mono", "JetBrains Mono", "Menlo", "Monaco", "Lucida Console",
+        "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+        "Courier New", monospace;
     --font-stack:
-        "Menlo", "Monaco", "Lucida Console", "Liberation Mono",
-        "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New",
-        monospace, serif;
+        "IBM Plex Mono", "Zed Mono", "PxPlus IBM VGA8", "IBM VGA 8x16",
+        "Cascadia Mono", "JetBrains Mono", "Menlo", "Monaco", "Lucida Console",
+        "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+        "Courier New", monospace;
     --global-line-height: 1.6em;
     --page-width: 70em;
     --display-h1-decoration: 1;
