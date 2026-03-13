@@ -4,3 +4,5 @@
 
 # Optional: Hugo modules cache
 /.hugo_build.lock
+
+/Notes.md
